@@ -1,0 +1,33 @@
+body{padding:0;margin:0}
+.flex-container{
+    display: flex;
+    height: 100vh;
+}
+.main-konten{
+    display: flex;
+
+}
+.header,.footer{
+    height: 20vh;
+    background: khaki;
+}
+.artikel,.asside-bg3{
+    height: 60vh;
+}
+.nav{
+    width: 30vh;
+    background: pink;
+}
+.konten{
+    width: 100%;
+}
+.artikel{
+    width: 70%;
+}
+.asside-bg3{
+    width: 30%;
+    background: aqua;
+}
+.p20{
+    padding: 20px;
+}

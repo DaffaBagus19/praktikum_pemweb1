@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+
+body{padding:0;margin:0}
+.flex-container{
+    display: flex;
+    height: 80vh;
+
+}
+
+.main-konten{
+    display: flex;
+
+}
+
+.header,.footer{
+    height: 10vh;
+    background: #96D1C7;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.artikel,.asside-bg3{
+    height: 38vh;
+    margin: 20px;
+    height: 500px;
+    justify-content: center;
+}
+
+.konten{
+    width: 100%;
+}
+
+.article{
+    width: 80%;
+    background: #FC7978;
+    margin: 5px;
+    order: 2;
+    margin: 20px;
+}
+
+.container_gambar{
+    display: flex;
+    justify-content: center;
+ }
+
+.gambar1{
+    width: 25em;
+    margin: 18px;
+}
+
+.asside-bg3{
+    width: 15%;
+    background: #5EB7B7;
+    order: 1;
+}
+
+.p20{
+    padding: 20px;
+}
+
+body{
+    background-color: hotpink;
+}
+
+.poto{
+    width: 30px;
+    height: 20px;
+    border: 2px solid black;
+}

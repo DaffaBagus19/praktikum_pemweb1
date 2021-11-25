@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+}
+
+.container_atas{
+   display: flex;
+   justify-content: center;
+}
+
+img.gambar1{
+    width: 25em;
+    margin: 18px;
+}
+
+.container_bawah{
+    display: flex;
+    justify-content: center;
+}
+
+img.gambar2{
+    width: 15em;
+    margin: 9px;
+}
