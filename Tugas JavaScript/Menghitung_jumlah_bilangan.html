@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Jumlah Bilangan</title>
+</head>
+<body>
+    <h2>Menghitung Penjumlahan</h2>
+    <input type="text" id="bil1" onchange="hitung()">
+    <p>+</p>
+    <input type="text" id="bil2" onchange="hitung()">
+    <p>=</p>
+    <div id="hasil"></div>
+
+    <script>
+        function hitung(){
+            let bil1 = parseInt(document.getElementById("bil1").value);
+            let bil2 = parseInt(document.getElementById("bil2").value);
+            let hasil = document.getElementById("hasil")
+            hasil.innerHTML ="Hasil : " + (bil1 + bil2);
+
+        }
+    </script>
+</body>
+</html>
