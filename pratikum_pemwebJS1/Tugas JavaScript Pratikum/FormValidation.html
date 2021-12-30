@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        span {
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <label for="form-nama">Nama:</label>
+    <input type="text" id="nama" placeholder="masukan nama">
+    <span>nama tidak boleh kosong</span>
+    <br>
+    <label for="form-email">Email:</label>
+    <input type="text" id="email" placeholder="masukan email">
+    <span>emai tidak boleh kosong</span>
+    <br>
+    <label for="form-jam">Waktu:</label>
+    <input type="time" id="jam">
+    <span>jam keberangkatan tidak boleh kosong</span>
+    <br>
+    <label for="form-tujuan">Tujuan:</label>
+    <input type="text" id="tujuan" placeholder="masukan tujuan">
+    <span>tujuan tidak boleh kosong</span>
+    <br>
+    <label for="form-tiket">Tiket:</label>
+    <input type="number" id="tiket" placeholder="masukan jumlah tiket">
+    <span>jumlah tiket tidak boleh kosong</span>
+    <br>
+    <button onclick="validasi()">Submit</button>
+    <div id="hasil"></div>
+
+    <script>
+        let nama = document.getElementById("nama")
+        let email = document.getElementById("email")
+        let jam = document.getElementById("jam")
+        let tujuan = document.getElementById("tujuan")
+        let tiket = document.getElementById("tiket")
+
+        let span = document.getElementsByTagName("span")
+        let hasil = document.getElementById("hasil")
+
+        function validasi() {
+            if (nama.value == "" || nama.value.length >= 30) {
+                span[0].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += nama.value + "<br>"
+            }
+
+            if (email.value == "") {
+                span[1].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += email.value + "<br>"
+            }
+
+            if (jam.value == "") {
+                span[2].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += jam.value + "<br>"
+            }
+            if (tujuan.value == "") {
+                span[3].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += tujuan.value + "<br>"
+            }
+            if (tiket.value == "") {
+                span[4].style.visibility = "visible"
+            } else {
+                hasil.innerHTML += tiket.value + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>

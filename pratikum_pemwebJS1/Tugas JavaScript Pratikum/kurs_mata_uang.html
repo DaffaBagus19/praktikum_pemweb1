@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konverter Kurs</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Masukan Nilai
+            </td>
+            <td>
+                valas
+            </td>
+            <td>
+                Nilai Rupiah
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="value" onchange="convert()">
+            </td>
+            <td>
+                <select id="valas" onchange="changeValas()">
+                    <option value="usd">USD</option>
+                    <option value="sgd">SGD</option>
+                    <option value="myr">MYR</option>
+                    <option value="jpy">JPY</option>
+                    <option value="eur">EUR</option>
+                    <option value="sar">SAR</option>
+                </select>
+            </td>
+            <td>
+                <div id="hasil"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        let doc_nilai = document.getElementById("value")
+        let hasil = document.getElementById("hasil")
+        let kurs = 9915
+        let nilai = 0
+
+        function changeValas() {
+            let valas = document.getElementById("valas").value
+            if (valas == "usd") {
+                kurs = 9915
+            } else if (valas == "sgd") {
+                kurs = 13478
+            } else if (valas == "myr") {
+                kurs = 874
+            } else if (valas == "jpy") {
+                kurs = 120
+            } else if (valas == "eur") {
+                kurs = 15888
+            } else if (valas == "sar") {
+                kurs = 3592
+            }
+            convert()
+        }
+        function convert() {
+            nilai = parseInt(doc_nilai.value)
+            let rupiah = new Intl.NumberFormat("ID")
+            hasil.innerHTML = "Rp. " + rupiah.format(nilai * kurs)
+        }
+
+    </script>
+</body>
+
+</html>
